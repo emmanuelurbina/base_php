@@ -1,10 +1,12 @@
 <?php
+require_once "dotenv";
 
+(new DotEnv(__DIR__ . '/.env'))->load();
 class Connection
 {
 
   private $driver = "mysql";
-  private $host = '';
+  private $host = ''; // getenv(HOST)
   private $user = '';
   private $password = '';
   private $dbName = '';
